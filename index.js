@@ -49,25 +49,31 @@ function filter(array, iteratee){
 function find(theArray, fnc){
     const found = [];
     theArray.forEach((item) => {
-        if (fnc(item) == true) {;
+        if (fnc(item) == true) {
         return item;
         } else {
             return null;
         }
         found.push(item);
-    })
+    });
     return found;
 }
 
 
 //return the last item in theArray
 function findLast(theArray){
-    return theArray[-1];
+    return theArray[theArray.length -1];
+}
+
+or
+
+function findLast(theArray){
+    return theArray.pop();
 }
 
 //return the first element of the array
 function head(theArray){
-    return theArray[0]
+    return theArray[0];
 }
 
 //create a new array
@@ -76,7 +82,10 @@ function head(theArray){
 //return the new array
 function reverse(theArray){
     const newArray = [];
-    
+    for (i = theArray.length; i-- > 0; ) {
+        newArray.push(theArray[i]);
+    }
+    return newArray;
 }
 
 //create a new array
@@ -84,7 +93,11 @@ function reverse(theArray){
 //add the item from each loop to the new array except the first item
 //return the new array
 function tail(theArray){
-
+    const newArray = [];
+    for (i = 2; i <= theArray.length -1; i++) {
+        newArray.push(theArray[i]);
+    }
+    return newArray;
 }
 
 //implement the most basic sorting algorithm there is
