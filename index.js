@@ -12,7 +12,12 @@
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
 function map(array, iteratee){
-
+    const formatted =[];
+    array.forEach((item) => {
+        iteratee(item);
+        formatted.push(iteratee(item));
+    });
+    return formatted;
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -25,7 +30,14 @@ function map(array, iteratee){
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
 function filter(array, iteratee){
-
+    const filtered =[];
+    array.forEach((item) => {
+      if (iteratee(item) !== true) {
+        return item;
+      }
+      filtered.push(item);
+    });
+    return filtered;
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -35,18 +47,27 @@ function filter(array, iteratee){
 //fnc will return true or false, if true return the item 
 //after looping, return null
 function find(theArray, fnc){
-
+    const found = [];
+    theArray.forEach((item) => {
+        if (fnc(item) == true) {;
+        return item;
+        } else {
+            return null;
+        }
+        found.push(item);
+    })
+    return found;
 }
 
 
 //return the last item in theArray
 function findLast(theArray){
-
+    return theArray[-1];
 }
 
 //return the first element of the array
 function head(theArray){
-
+    return theArray[0]
 }
 
 //create a new array
@@ -54,7 +75,8 @@ function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 function reverse(theArray){
-
+    const newArray = [];
+    
 }
 
 //create a new array
