@@ -111,7 +111,18 @@ function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 function sort(theArray){
+    const newArray = [];
+    while (a > b) {
+        for (i = 0; i = theArray.length; i++) {
+            if (a > b) {
+                for (i = theArray.length; i-- > 0; ) {
+                    newArray.push(theArray[i]);
+                }
+            } else {
 
+            }
+        }
+    }
 }
 
 exports.map = map;
