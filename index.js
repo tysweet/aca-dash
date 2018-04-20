@@ -20,6 +20,26 @@ function map(array, iteratee){
     return array;
 }
 
+// const array = [3,2,1,4,6,5,7];
+// const iteratee = (array) => {
+//     for (i = 0; i == array.length; i++) {
+//       array[i] *= 2;
+//     }
+//   };
+  
+//   function map(array, iteratee){
+//       const newArray =[];
+//       array.forEach((item) => {
+//           iteratee;
+//           newArray.push(item);
+//       });
+//       return newArray;
+//   }
+  
+//   map(array);
+
+
+
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 //create a function called `filter`, it should take 2 parameters `array` and `iteratee`
 //`array` must be an array
