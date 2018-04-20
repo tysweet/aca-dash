@@ -17,7 +17,7 @@ function map(array, iteratee){
         iteratee(item);
         formatted.push(iteratee(item));
     });
-    return formatted;
+    return array;
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -37,7 +37,7 @@ function filter(array, iteratee){
       }
       filtered.push(item);
     });
-    return filtered;
+    return array;
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -94,7 +94,7 @@ function reverse(theArray){
 //return the new array
 function tail(theArray){
     const newArray = [];
-    for (i = 2; i <= theArray.length -1; i++) {
+    for (i = 1; i <= theArray.length -1; i++) {
         newArray.push(theArray[i]);
     }
     return newArray;
