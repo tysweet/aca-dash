@@ -129,9 +129,9 @@ function sort(theArray) {
       for (let i = 0; i < theArray.length; i++) {
         for (a = i; a < theArray.length; a++) {
           if(theArray[i] > theArray[a]){
-            const temp = theArray[i]
+            const sortAll = theArray[i]
             theArray[i] = theArray[a]
-            theArray[a] = temp
+            theArray[a] = sortAll
             sorted = true
           }
         }
